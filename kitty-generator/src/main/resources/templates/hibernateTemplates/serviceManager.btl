@@ -1,0 +1,23 @@
+package ${table.serviceImplPackageName};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import ${table.modelPackageName}.${table.className};
+
+/**
+ * ${table.description} (${table.className}ServiceManager)
+ * 作者：  generate
+ * 时间：  ${strutil.formatDate(date(),'yyyy-MM-dd HH:mm:ss')}
+ * 说明：  ${table.className}ServiceImpl
+ */
+@Service
+public class ${table.className}ServiceManager extends GenericManagerImpl<${table.className}, Integer> {
+
+    private ${table.className}Dao dao;
+    @Autowired
+    public ${table.className}Manager(${table.className}Dao genericDao) {
+      super(genericDao);
+      this.dao=genericDao;
+    }
+
+}

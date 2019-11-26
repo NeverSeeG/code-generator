@@ -1,0 +1,27 @@
+package ${table.modelPackageName};
+
+import lombok.Data;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+/**
+ * ${table.description} (${table.className})
+ * 作者：  generate
+ * 时间：  ${strutil.formatDate(date(),'yyyy-MM-dd HH:mm:ss')}
+ * 说明：  ${table.className}
+ */
+@Entity
+@Table(name = "${table.Name}")
+@Data
+public class ${table.className} {
+
+<%
+	for(column in table.columns) {
+%>
+	/** ${column.description} */
+	@Column
+	private ${column.javaType} ${column.fieldName};
+<%
+	}
+%>
+}

@@ -1,0 +1,16 @@
+# tomcat
+server:
+  port: 9001
+spring:
+  application:
+    name: kitty-generator
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/app?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+      username: root
+      password: pass
+beetl:
+  templatesPath: templates
+
+app:
+  outPutFolderPath: /opt/code/

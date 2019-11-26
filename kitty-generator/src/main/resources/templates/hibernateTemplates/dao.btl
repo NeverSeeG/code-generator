@@ -1,0 +1,13 @@
+package ${table.daoPackageName};
+
+import ${table.modelPackageName}.${table.className};
+
+/**
+ * ${table.description} (${table.className}Dao)
+ * 作者：  generator
+ * 时间：  ${strutil.formatDate(date(),'yyyy-MM-dd HH:mm:ss')}
+ * 说明：  ${table.className}Dao
+ */
+public interface ${table.className}Dao extends GenericDao<${table.className},Integer>{
+
+}
